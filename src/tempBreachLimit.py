@@ -1,7 +1,3 @@
-# PASSIVE = "PASSIVE_COOLING"
-# HI_ACTIVE = "HI_ACTIVE_COOLING"
-# MED_ACTIVE = "MED_ACTIVE_COOLING"
-
 temperature = {"PASSIVE_COOLING": (0, 35),
                "HI_ACTIVE_COOLING": (0, 45),
                "NORMAL_ACTIVE_COOLING": (0, 40), }

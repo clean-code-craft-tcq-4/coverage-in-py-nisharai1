@@ -1,4 +1,4 @@
-import src.alertConfig as Config
+import src.typewiseAlertConfig as Config
 
 
 def get_step(alertTarget, breachType):
@@ -23,7 +23,7 @@ def send_to_controller(breachType):
 
 def send_to_email(breachType):
     if breachType in Config.breachType:
-        EmailMessage = f'To: {Config.recepient}' + '\n' + Config.alertMessage[breachType]
+        EmailMessage = f'To: {Config.recepient}' + '\t' + Config.alertMessage[breachType]
         print(EmailMessage)
         return Config.recepient, EmailMessage
     else:

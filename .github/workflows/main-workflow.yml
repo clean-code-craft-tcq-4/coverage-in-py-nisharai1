@@ -24,14 +24,6 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           # exit-zero treats all errors as warnings.
           flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
-      - name: Run and collect coverage
+      - name: Run
         run: |
-          coverage run --branch typewise_alert.test.py
-          coverage html
-          coverage report
-      - name: Upload coverage
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: ./htmlcov
-          retention-days: 21
+            python -m unittest typewise_alert_test
